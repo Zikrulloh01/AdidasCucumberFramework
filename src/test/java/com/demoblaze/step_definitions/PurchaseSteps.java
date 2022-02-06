@@ -2,12 +2,14 @@ package com.demoblaze.step_definitions;
 
 import com.demoblaze.adidasPages.CartPage;
 import com.demoblaze.adidasPages.ProductPage;
+import com.demoblaze.utilities.BrowserUtils;
 import com.demoblaze.utilities.ConfigurationsReader;
 import com.demoblaze.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 
 import java.util.concurrent.TimeUnit;
 
@@ -56,6 +58,10 @@ public class PurchaseSteps {
 
     @And("Click Ok button")
     public void clickOkButton() {
+
+        String cheque = Driver.getDriver().findElement(By.xpath("//p[@style='display: block;']")).getText();
+        String id = cheque.substring(cheque.indexOf("d:") + 2, cheque.indexOf("Amount"));
+        System.out.println(id.trim());
         new CartPage().okButton.click();
     }
 }
