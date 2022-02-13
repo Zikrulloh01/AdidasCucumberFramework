@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 
 public abstract class BasePageForAdidas {
     public BasePageForAdidas(){
@@ -19,6 +21,9 @@ public abstract class BasePageForAdidas {
 
     @FindBy(xpath = "(//li/a)[4]")
     public WebElement cartPage;
+
+    @FindBy(xpath = "//h4/a")
+    public List<WebElement> allElements;
 
     public void navigateTo(String str){
         Driver.getDriver().findElement(By.xpath("//a[contains(.,'" + str + "')]")).click();

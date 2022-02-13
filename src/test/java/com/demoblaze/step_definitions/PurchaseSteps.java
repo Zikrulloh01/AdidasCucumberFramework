@@ -9,8 +9,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class PurchaseSteps {
@@ -63,5 +65,13 @@ public class PurchaseSteps {
         String id = cheque.substring(cheque.indexOf("d:") + 2, cheque.indexOf("Amount"));
         System.out.println(id.trim());
         new CartPage().okButton.click();
+    }
+
+    @Then("Under {string} category user should be able to see following products")
+    public void underCategoryUserShouldBeAbleToSeeFollowingProducts(String category, List<String> items) {
+        productPage.navigateTo(category);
+        BrowserUtils.waitFor(1);
+        List<String> elementsText = BrowserUtils.getElementsText(productPage.allElements);
+        Assert.assertEquals("Elements not Match", items, elementsText);
     }
 }
