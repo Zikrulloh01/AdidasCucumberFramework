@@ -2,6 +2,7 @@ D:\AdidasCucumberFramework\src\test\java\com\demoblaze\utilities\Driver.java
 D:\AdidasCucumberFramework\src\test\java\com\demoblaze\utilities\BrowserUtils.java
 D:\AdidasCucumberFramework\src\test\java\com\demoblaze\runners\CukesRunner.java
 D:\AdidasCucumberFramework\src\test\java\com\demoblaze\adidasPages\ProductPage.java
+D:\AdidasCucumberFramework\src\test\java\com\demoblaze\runners\FailedTestRunner.java
 D:\AdidasCucumberFramework\src\test\java\com\demoblaze\adidasPages\BasePageForAdidas.java
 D:\AdidasCucumberFramework\src\test\java\com\demoblaze\adidasPages\CartPage.java
 D:\AdidasCucumberFramework\src\test\java\com\demoblaze\step_definitions\PurchaseSteps.java
