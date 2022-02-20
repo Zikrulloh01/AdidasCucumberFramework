@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Parallel Test
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 41.878 s - in Parallel Test
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.863 s - in Parallel Test

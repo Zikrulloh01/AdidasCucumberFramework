@@ -30,6 +30,7 @@ public class PurchaseSteps {
     @When("User adds an {string} from {string}")
     public void user_adds_an_from(String item, String category) {
         productPage.navigateTo(category,item);
+        BrowserUtils.waitFor(2);
         productPage.addToCart();
         productPage.homeLink.click();
     }
